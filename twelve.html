@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 School Admission Form</title>
+    <style>
+        body {
+            font-family:serif;
+            margin: 20px;
+        }
+        
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+        fieldset {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            
+        }
+        legend {
+            font-weight: bold;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+
+
+
+li, a{
+    list-style:none ;
+    text-decoration:none;
+    display:inline ;
+    padding:8px;
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="riaj">
+    
+    <ul>
+        <li><a href="index.html">home</a></li>
+         <li><a href="admission.html">admisson</a></li>
+        
+        <li><a href="">gallry</a></li>
+        <li><a href="">about</a></li>
+    </ul>
+    
+    </div>
+
+    <form id="admissionForm">
+        <fieldset>
+            <legend>A. BASIC DETAILS</legend>
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" required><br>
+
+            <label for="fatherName">Father Name:</label>
+            <input type="text" id="fatherName" name="fatherName" required><br>
+
+            <label for="motherName">Mother Name:</label>
+            <input type="text" id="motherName" name="motherName" required><br>
+
+            <label for="guardianRelationship">Relationship in Guardian:</label>
+            <input type="text" id="guardianRelationship" name="guardianRelationship" required><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="others">Others</option>
+            </select><br>
+
+            <div id="kanyashreeIdField" style="display: none;">
+                <label for="kanyashreeId">Enter Kanyashree ID:</label>
+                <input type="text" id="kanyashreeId" name="kanyashreeId"><br>
+            </div>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br>
+
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" readonly><br>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea><br>
+
+            <label for="postOffice">Post Office:</label>
+            <input type="text" id="postOffice" name="postOffice" required><br>
+
+            <label for="policeStation">Police Station:</label>
+            <input type="text" id="policeStation" name="policeStation" required><br>
+
+            <label for="district">District:</label>
+            <input type="text" id="district" name="district" required><br>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required><br>
+
+            <label for="pinCode">Pin Code:</label>
+            <input type="text" id="pinCode" name="pinCode" required><br>
+
+            <label for="caste">Caste:</label>
+            <select id="caste" name="caste" required>
+                <option value="">Select</option>
+                <option value="gen">GEN</option>
+                <option value="sc">SC</option>
+                <option value="st">ST</option>
+                <option value="obc">OBC</option>
+            </select><br>
+
+            <div id="casteNumberField" style="display: none;">
+                <label for="casteNumber">Enter Number:</label>
+                <input type="text" id="casteNumber" name="casteNumber"><br>
+            </div>
+
+            <label for="religion">Religion:</label>
+            <input type="text" id="religion" name="religion" required><br>
+
+            <label for="incomeCategory">Income Category:</label>
+            <select id="incomeCategory" name="incomeCategory" required>
+                <option value="">Select</option>
+                <option value="apl">APL</option>
+                <option value="bpl">BPL</option>
+            </select><br>
+
+            <div id="bplNumberField" style="display: none;">
+                <label for="bplNumber">Enter BPL Number:</label>
+                <input type="text" id="bplNumber" name="bplNumber"><br>
+            </div>
+
+            <label for="annualIncome">Annual Income:</label>
+            <input type="number" id="annualIncome" name="annualIncome" required><br>
+
+            <label for="mobileNumber">Mobile Number:</label>
+            <input type="text" id="mobileNumber" name="mobileNumber" required><br>
+
+            <label for="whatsappNumber">WhatsApp Number:</label>
+            <input type="text" id="whatsappNumber" name="whatsappNumber" required><br>
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="aadhaar">Aadhaar Card Number:</label>
+            <input type="text" id="aadhaar" name="aadhaar" required><br>
+
+            <label for="lastSchool">Last School:</label>
+            <input type="text" id="lastSchool" name="lastSchool" required><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>B. BANKING DETAILS</legend>
+            <label for="bankAccountNumber">Bank Account Number:</label>
+            <input type="text" id="bankAccountNumber" name="bankAccountNumber" required><br>
+
+            <label for="bankName">Bank Name:</label>
+            <input type="text" id="bankName" name="bankName" required><br>
+
+            <label for="branchName">Branch Name:</label>
+            <input type="text" id="branchName" name="branchName" required><br>
+
+            <label for="ifscCode">IFSC Code:</label>
+            <input type="text" id="ifscCode" name="ifscCode" required><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>C. ADMISSION RELATED INFORMATION</legend>
+            <label for="section">Section:</label>
+            <select id="section" name="section" required>
+                <option value="">Select</option>
+                <option value="none">None</option>
+                <option value="12science">12 Science</option>
+                <option value="12bioscience">12 Bio Science</option>
+                <option value="12arts">12 Arts</option>
+            </select><br>
+
+            <div id="subjectsField" style="display: none;">
+                <label for="selectedSubjects">Enter Your 11 Class Selected Subjects:</label>
+                <textarea id="selectedSubjects" name="selectedSubjects"></textarea><br>
+            </div>
+
+            <label for="previousExam">Previous Exam Name:</label>
+            <input type="text" id="previousExam" name="previousExam" required><br>
+
+            <label for="totalMarks">Total Marks:</label>
+            <input type="number" id="totalMarks" name="totalMarks" required><br>
+
+            <label for="passingYear">Passing Year:</label>
+            <input type="number" id="passingYear" name="passingYear" required><br>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const genderField = document.getElementById('gender');
+            const kanyashreeIdField = document.getElementById('kanyashreeIdField');
+            const casteField = document.getElementById('caste');
+            const casteNumberField = document.getElementById('casteNumberField');
+            const incomeCategoryField = document.getElementById('incomeCategory');
+            const bplNumberField = document.getElementById('bplNumberField');
+            const dobField = document.getElementById('dob');
+            const ageField = document.getElementById('age');
+            const sectionField = document.getElementById('section');
+            const subjectsField = document.getElementById('subjectsField');
+
+            genderField.addEventListener('change', function () {
+                if (genderField.value === 'female') {
+                    kanyashreeIdField.style.display = 'block';
+                } else {
+                    kanyashreeIdField.style.display = 'none';
+                }
+            });
+
+            casteField.addEventListener('change', function () {
+                if (casteField.value === 'sc' || casteField.value === 'st' || casteField.value === 'obc') {
+                    casteNumberField.style.display = 'block';
+                } else {
+                    casteNumberField.style.display = 'none';
+                }
+            });
+
+            incomeCategoryField.addEventListener('change', function () {
+                if (incomeCategoryField.value === 'bpl') {
+                    bplNumberField.style.display = 'block';
+                } else {
+                    bplNumberField.style.display = 'none';
+                }
+            });
+
+            dobField.addEventListener('change', function () {
+                const dob = new Date(dobField.value);
+                const today = new Date();
+                let age = today.getFullYear() - dob.getFullYear();
+                const monthDiff = today.getMonth() - dob.getMonth();
+                if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+                    age--;
+                }
+                ageField.value = age;
+            });
+
+            sectionField.addEventListener('change', function () {
+                if (sectionField.value === '12science' || sectionField.value === '12bioscience' || sectionField.value === '12arts') {
+                    subjectsField.style.display = 'block';
+                } else {
+                    subjectsField.style.display = 'none';
+                }
+            });
+
+            document.getElementById('admissionForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                // Logic to handle form submission and display the summary page
+                displaySummary();
+            });
+
+            function displaySummary() {
+                const studentName = document.getElementById('studentName').value;
+                const fatherName = document.getElementById('fatherName').value;
+                const mobileNumber = document.getElementById('mobileNumber').value;
+                const section = sectionField.value;
+                const selectedSubjects = document.getElementById('selectedSubjects').value;
+                const dob = new Date(dobField.value);
+                const registrationNumber = `${dob.getFullYear()}${dob.getMonth() + 1}${dob.getDate()}`;
+                const today = new Date().toLocaleDateString();
+
+                const summaryWindow = window.open('', '_blank');
+                summaryWindow.document.write(`
+                    <html>
+                    <head>
+                        <title>Admission Summary</title>
+                        <style>
+                            body { font-family: Arial, sans-serif; margin: 20px; }
+                            h1 { text-align: center; }
+                            .container { display: flex; justify-content: space-between; }
+                            .signatures { display: flex; justify-content: space-between; margin-top: 50px; }
+                         li, a{
+    list-style:none ;
+    text-decoration:none;
+    display:inline ;
+    padding:8px;
+    
+    
+}   
+                            
+                            
+                        </style>
+                    </head>
+                    <body>
+                    
+                     <div id="riaj">
+    
+    <ul>
+        <li><a href="index.html">home</a></li>
+         <li><a href="admission.html">admisson</a></li>
+        
+        <li><a href="">gallry</a></li>
+        <li><a href="">about</a></li>
+    </ul>
+    
+    </div>
+                    
+                    
+                    
+                    
+                    <div class="sana"> ===============================================</div>
+                        <h2>Sagarbarh B.S Vidyabhawan  </h2>
+                        <div class="container">
+                            <div>
+                                <p>Registration Number: ${registrationNumber}</p>
+                                <p>Name of Student: ${studentName}</p>
+                                <p>Class: ${section !== 'none' ? section.replace('12', 'Class 12') : 'None'}</p>
+                                <p>Selected Subjects: ${section !== 'none' ? selectedSubjects : 'None'}</p>
+                                <p>Father Name: ${fatherName}</p>
+                                <p>Current Date: ${today}</p>
+                                <p>Mobile Number: ${mobileNumber}</p>
+                            </div>
+                        </div>
+                      
+                        <div class="signatures">
+                            <div>Signature of Guardian</div>
+                            <div>Signature of Authority</div>
+                        </div>
+                         <div class="riaj"> ===============================================</div>
+                    </body>
+                    </html>
+                `);
+                summaryWindow.document.close();
+            }
+        });
+    </script>
+</body>
+</html>

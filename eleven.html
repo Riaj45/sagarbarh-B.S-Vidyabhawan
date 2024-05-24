@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11 School Admission Form</title>
+    <style>
+        body {
+    font-family:serif;
+    margin: 20px;
+}
+
+
+
+label {
+    display: inline-block;
+    width: 200px;
+    margin-top: 10px;
+}
+
+input, select , textarea{
+    width: 93%;
+    padding: 10px;
+    margin-top: 10px;
+    border:1px solid #ccc;
+    border-radius:4px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+#submittedData {
+    display: none;
+}
+
+
+
+
+
+
+fieldset{
+
+margin-bottom:20px;
+padding:20px;
+border:1px solid #ccc;
+    
+}
+
+
+li, a{
+list-style:none;
+text-decoration:none;
+display:inline ;
+padding:8px;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+<div id="riaj">
+    
+    <ul>
+        <li><a href="index.html">home</a></li>
+         <li><a href="admission.html">admisson</a></li>
+        
+        <li><a href="">gallry</a></li>
+        <li><a href="">about</a></li>
+    </ul>
+    
+    </div>
+    
+    <form id="admissionForm">
+        <div class="section">
+        <fieldset>    
+        <legend>A. BASIC DETAILS</legend>        
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" required><br>
+
+            <label for="fatherName">Father Name:</label>
+            <input type="text" id="fatherName" name="fatherName" required><br>
+
+            <label for="motherName">Mother Name:</label>
+            <input type="text" id="motherName" name="motherName" required><br>
+
+            <label for="guardianName">Guardian Name:</label>
+            <input type="text" id="guardianName" name="guardianName"><br>
+
+            <label for="relationshipGuardian">Relationship in Guardian:</label>
+            <input type="text" id="relationshipGuardian" name="relationshipGuardian"><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" onchange="toggleKanyashreeIdField()" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select><br>
+
+            <div id="kanyashreeIdField" style="display: none;">
+                <label for="kanyashreeId">Enter Kanyashree ID:</label>
+                <input type="text" id="kanyashreeId" name="kanyashreeId"><br>
+            </div>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" oninput="calculateAge()" required><br>
+
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" readonly><br>
+
+           
+ <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea><br>
+        
+            <label for="postOffice">Post Office:</label>
+            <input type="text" id="postOffice" name="postOffice" required><br>
+
+            <label for="policeStation">Police Station:</label>
+            <input type="text" id="policeStation" name="policeStation" required><br>
+
+            <label for="district">District:</label>
+            <input type="text" id="district" name="district" required><br>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required><br>
+
+            <label for="pinCode">Pin Code:</label>
+            <input type="text" id="pinCode" name="pinCode" required><br>
+
+            <label for="caste">Caste:</label>
+            <select id="caste" name="caste" onchange="toggleCasteNumberField()" required>
+                <option value="gen">GEN</option>
+                <option value="sc">SC</option>
+                <option value="st">ST</option>
+                <option value="obc">OBC</option>
+            </select><br>
+
+            <div id="casteNumberField" style="display: none;">
+                <label for="casteNumber">Enter Number:</label>
+                <input type="text" id="casteNumber" name="casteNumber"><br>
+            </div>
+
+            <label for="religion">Religion:</label>
+            <input type="text" id="religion" name="religion" required><br>
+
+            <label for="incomeStatus">Income Status:</label>
+            <select id="incomeStatus" name="incomeStatus" onchange="toggleBplNumberField()" required>
+                <option value="apl">APL</option>
+                <option value="bpl">BPL</option>
+            </select><br>
+
+            <div id="bplNumberField" style="display: none;">
+                <label for="bplNumber">Enter BPL Number:</label>
+                <input type="text" id="bplNumber" name="bplNumber"><br>
+            </div>
+
+            <label for="annualIncome">Annual Income:</label>
+            <input type="text" id="annualIncome" name="annualIncome" required><br>
+
+            <label for="mobileNumber">Mobile Number:</label>
+            <input type="text" id="mobileNumber" name="mobileNumber" required><br>
+
+            <label for="whatsappNumber">WhatsApp Number:</label>
+            <input type="text" id="whatsappNumber" name="whatsappNumber"><br>
+
+   <label for="emailId">Email:</label>
+            <input type="email" id="emailId" name="emailId"><br>
+
+            <label for="aadhaarNumber">Aadhaar Card Number:</label>
+            <input type="text" id="aadhaarNumber" name="aadhaarNumber" required><br>
+
+            <label for="lastSchool">Last School:</label>
+            <input type="text" id="lastSchool" name="lastSchool" required><br>
+            </fieldset>
+            
+        </div>
+
+        <div class="section">
+        
+        <fieldset>
+        <legend>B. BANKING DETAILS</legend>
+            <label for="bankAccountNumber">Bank Account Number:</label>
+            <input type="text" id="bankAccountNumber" name="bankAccountNumber" required><br>
+
+            <label for="bankName">Bank Name:</label>
+            <input type="text" id="bankName" name="bankName" required><br>
+
+            <label for="branch">Branch:</label>
+            <input type="text" id="branch" name="branch" required><br>
+
+            <label for="ifsc">IFSC Code:</label>
+            <input type="text" id="ifsc" name="ifsc" required><br>
+            </fieldset>
+        </div>
+
+        <div class="section">
+        <fieldset>
+        <legend>C. ADMISSON RELATED INFORMATION</legend>
+        
+            
+            <label for="examName">Exam Name:</label>
+            <input type="text" id="examName" name="examName" required><br>
+
+            <label for="rollNumber">Roll Number:</label>
+            <input type="text" id="rollNumber" name="rollNumber" required><br>
+
+            <label for="passingYear">Passing Year:</label>
+            <input type="text" id="passingYear" name="passingYear" required><br>
+
+            <legend>mark obtained</legend>
+            <table id="marksTable">
+                <tr>
+                    <th>Subject</th>
+                    <th>Marks</th>
+                </tr>
+                <tr>
+                    <td>Bengali</td>
+                    <td><input type="number" id="bengaliMarks" name="bengaliMarks" oninput="calculateTotalMarks()" required></td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td><input type="number" id="englishMarks" name="englishMarks" oninput="calculateTotalMarks()" required></td>
+                </tr>
+                <tr>
+                    <td>math</td>
+                    <td><input type="number" id="organsMarks" name="organsMarks" oninput="calculateTotalMarks()" required></td>
+                </tr>
+                <tr>
+                    <td>Physics</td>
+                    <td><input type="number" id="physicsMarks" name="physicsMarks" oninput="calculateTotalMarks()" required></td>
+                </tr>
+                <tr>
+                    <td>Life Science</td>
+                    <td><input type="number" id="lifeScienceMarks" name="lifeScienceMarks" oninput="calculateTotalMarks()" required></td>
+                </tr>
+                <tr>
+                    <td>Geography</td>
+                    <td><input type="number" id="geographyMarks" name="geographyMarks" oninput="calculateTotalMarks()" required></td>
+                </tr>
+                <tr>
+                    <td>History</td>
+                    <td><input type="number" id="historyMarks" name="historyMarks" oninput="calculateTotalMarks()" required></td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td><input type="number" id="totalMarks" name="totalMarks" readonly></td>
+                </tr>
+            </table>
+
+            <label for="previousClass">Previous Class:</label>
+            <input type="text" id="previousClass" name="previousClass" required><br>
+
+            <label for="section">Section:</label>
+            <select id="section" name="section" onchange="toggleSubjectFields()" required>
+                <option value="none">None</option>
+                <option value="11science">11 Science</option>
+                <option value="11bioscience">11 Bio Science</option>
+                <option value="11arts">11 Arts</option>
+            </select><br>
+
+            <div id="subjectFields" style="display: none;">
+                <h3>Common Subjects</h3>
+                <p id="commonSubjects"></p>
+
+                <h3>Select Subject</h3>
+                <p id="selectSubjects"></p>
+            </div>
+            </fieldset>
+        </div>
+
+        <button type="submit">Submit</button>
+        <button type="reset">reset</button>
+    </form>
+
+    <div id="submittedData" style="display: none;">
+        <h2>Sagarbarh B.S Vidyabhawan</h2>
+        <p id="registrationNumber"></p>
+        <p id="studentNameDisplay"></p>
+        <p id="classDisplay"></p>
+        <p id="selectedSubjectsDisplay"></p>
+        <p id="fatherNameDisplay"></p>
+        <p id="currentDateDisplay"></p>
+        <p id="mobileNumberDisplay"></p>
+        <div style="position: absolute; bottom: 400px; right: 20px;">Signature of Authority</div>
+        <div style="position: absolute; bottom: 400px; left: 20px;">Signature of Guardian</div>
+    </div>
+
+    <script>
+        
+document.getElementById('dob').addEventListener('change', calculateAge);
+document.getElementById('gender').addEventListener('change', toggleKanyashreeIdField);
+document.getElementById('caste').addEventListener('change', toggleCasteNumberField);
+document.getElementById('incomeStatus').addEventListener('change', toggleBplNumberField);
+document.getElementById('section').addEventListener('change', toggleSubjectFields);
+document.getElementById('admissionForm').addEventListener('submit', submitForm);
+
+function calculateAge() {
+    const dob = document.getElementById('dob').value;
+    const birthDate = new Date(dob);
+    const today = new Date();
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDifference = today.getMonth() - birthDate.getMonth();
+    if (monthDifference < 0 || (monthDifference === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    document.getElementById('age').value = age;
+}
+
+function toggleKanyashreeIdField() {
+    const gender = document.getElementById('gender').value;
+    const kanyashreeIdField = document.getElementById('kanyashreeIdField');
+    kanyashreeIdField.style.display = (gender === 'female') ? 'block' : 'none';
+}
+
+function toggleCasteNumberField() {
+    const caste = document.getElementById('caste').value;
+    const casteNumberField = document.getElementById('casteNumberField');
+    casteNumberField.style.display = (caste === 'sc' || caste === 'st' || caste === 'obc') ? 'block' : 'none';
+}
+
+function toggleBplNumberField() {
+    const incomeStatus = document.getElementById('incomeStatus').value;
+    const bplNumberField = document.getElementById('bplNumberField');
+    bplNumberField.style.display = (incomeStatus === 'bpl') ? 'block' : 'none';
+}
+
+function calculateTotalMarks() {
+    const subjects = ['bengaliMarks', 'englishMarks', 'organsMarks', 'physicsMarks', 'lifeScienceMarks', 'geographyMarks', 'historyMarks'];
+    let total = 0;
+    subjects.forEach(subject => {
+        const marks = document.getElementById(subject).value;
+        total += parseInt(marks) || 0;
+    });
+    document.getElementById('totalMarks').value = total;
+}
+
+function toggleSubjectFields() {
+    const section = document.getElementById('section').value;
+    const subjectFields = document.getElementById('subjectFields');
+    const commonSubjects = document.getElementById('commonSubjects');
+    const selectSubjects = document.getElementById('selectSubjects');
+
+    if (section === 'none') {
+        subjectFields.style.display = 'none';
+    } else {
+        subjectFields.style.display = 'block';
+
+        if (section === '11science') {
+            commonSubjects.textContent = 'Bengali, English, PSC, CHM';
+            selectSubjects.innerHTML = `<label for="selectSubject">Select Subject:</label>
+                <select id="selectSubject">
+                    <option value="math">Math</option>
+                    <option value="geography">Geography</option>
+                </select>`;
+        } else if (section === '11bioscience') {
+            commonSubjects.textContent = 'Bengali, English, Geography';
+            selectSubjects.innerHTML = `<label for="selectSubject">Select Subject:</label>
+                <select id="selectSubject">
+                    <option value="psc">PSC</option>
+                    <option value="chm">CHM</option>
+                </select>`;
+        } else if (section === '11arts') {
+            commonSubjects.textContent = 'Bengali, English, History, Geography';
+            selectSubjects.innerHTML = `<label for="selectSubject">Select Subject:</label>
+                <select id="selectSubject">
+                    <option value="socialService">Social Service</option>
+                    <option value="nutrition">Nutrition</option>
+                </select>`;
+        }
+    }
+}
+
+function submitForm(event) {
+    event.preventDefault();
+    if (validateForm()) {
+        const formData = new FormData(document.getElementById('admissionForm'));
+        const submittedDataDiv = document.getElementById('submittedData');
+        const randomRegistrationNumber = Math.floor(Math.random() * 1000000);
+
+        document.getElementById('registrationNumber').textContent = `Registration Number: ${randomRegistrationNumber}`;
+        document.getElementById('studentNameDisplay').textContent = `Name of Student: ${formData.get('studentName')}`;
+        document.getElementById('classDisplay').textContent = `Class: ${formData.get('section')}`;
+        document.getElementById('selectedSubjectsDisplay').textContent = `Selected Subjects: ${formData.get('section') === 'none' ? 'None' : document.getElementById('selectSubject').value}`;
+        document.getElementById('fatherNameDisplay').textContent = `Father's Name: ${formData.get('fatherName')}`;
+        document.getElementById('currentDateDisplay').textContent = `Current Date: ${new Date().toLocaleDateString()}`;
+        document.getElementById('mobileNumberDisplay').textContent = `Mobile Number: ${formData.get('mobileNumber')}`;
+
+        document.getElementById('admissionForm').style.display = 'none';
+        submittedDataDiv.style.display = 'block';
+    } else {
+        alert('Please fill all required fields.');
+    }
+}
+
+function validateForm() {
+    const requiredFields = document.querySelectorAll('#admissionForm [required]');
+    for (let field of requiredFields) {
+        if (!field.value.trim()) {
+            return false;
+        }
+    }
+    return true;
+}
+
+        
+    </script>
+</body>
+</html>

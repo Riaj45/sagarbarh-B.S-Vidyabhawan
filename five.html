@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 to 10 School Admission Form</title>
+    <style>
+        body {
+    font-family: serif;
+    
+    margin: 0;
+            padding-top: 60px;
+}
+
+
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: inline-block;
+    width: 200px;
+    margin-top: 10px;
+}
+
+input, select , textarea{
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    
+    border:1px solid #ccc;
+    border-radius:4px;
+}
+
+
+
+
+#submittedData {
+    display: none;
+}
+
+
+li, a {
+            list-style: none;
+            text-decoration: none;
+            display: inline;
+            padding: 10px;
+            
+        }
+
+        ul {
+            
+        
+            margin: 0;
+            padding: 0;
+            position:absolute ;
+            top: 0;
+            width: 100%;
+            text-align: center;
+        }
+
+        
+        
+        
+
+        a {
+            display: inline-block;
+        }
+        
+        
+        
+        
+        
+fieldset{
+    margin-bottom:20px;
+    padding:29px;
+    border:1px solid #ccc;
+}
+
+
+legend{
+    font-weight:blood;
+}
+
+
+
+#riaj{
+
+margin-top:20px;
+padding:10px 20px;
+background-color:#007BFF;
+color:white;
+    border:none;
+    cursor:pointer ;
+    width:50%;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+
+<div id="rabia">
+    
+    <ul>
+        <li><a href="index.html">home</a></li>
+         <li><a href="admission.html">admisson</a></li>
+        
+        <li><a href="">gallry</a></li>
+        <li><a href="">about</a></li>
+    </ul>
+    </div>
+    <form id="admissionForm">
+    <fieldset>     
+    <legend>A. BASIC INFORMATION</legend>
+       
+        
+        
+        <label for="name">Name of Student:</label>
+        <input type="name" id="name" name="name" required><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br>
+
+        <label for="gender">Gender:</label><br>
+        <select id="gender" name="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br>
+
+        <label for="religion">Religion:</label>
+        <input type="text" id="religion" name="religion" required><br>
+
+        <label for="caste">Caste:</label><br>
+        <select id="caste" name="caste" onchange="toggleCasteNumberField()" required>
+            <option value="gen">GEN</option>
+            <option value="sc">SC</option>
+            <option value="st">ST</option>
+            <option value="obc">OBC</option>
+        </select><br>
+        
+        <div id="casteNumberField" style="display: none;">
+            <label for="casteNumber">Enter Number:</label>
+            <input type="text" id="casteNumber" name="casteNumber"><br>
+        </div>
+
+        <label for="aadhaar">Aadhaar Card Number:</label>
+        <input type="number" id="aadhaar" name="aadhaar" required><br>
+
+        <label for="bloodGroup">Blood Group:</label>
+        <input type="text" id="bloodGroup" name="bloodGroup" required>
+            </fieldset>
+            
+        <br>
+        <fieldset>   
+        <legend>B. EDUCATIONAL INFORMATION</legend>
+             
+        <label for="academicYear">Academic Year:</label>
+        <input type="number" id="academicYear" name="academicYear" required><br>
+
+        <label for="currentDate">Current Date:</label>
+        <input type="date" id="currentDate" name="currentDate" readonly><br>
+
+        <label for="class">Class:</label><br>
+        <select id="class" name="class" required>
+            <option value="none">none</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select><br>
+
+        <label for="previousClass">Previous Class:</label>
+        <input type="text" id="previousClass" name="previousClass" required><br>
+
+        <label for="totalMarks">Total Marks:</label>
+        <input type="number" id="totalMarks" name="totalMarks" required><br>
+
+        <label for="previousSchool">Previous School:</label>
+        <input type="text" id="previousSchool" name="previousSchool" required><br>
+
+        <label for="medium">Medium:</label>
+        <input type="text" id="medium" name="medium" required>
+            </fieldset>
+            
+        <br>
+<fieldset>
+<legend>C. CONTACT INFORMATION</legend>
+        
+        
+        
+        
+        
+         <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea><br>
+        
+        
+        
+
+        <label for="district">District:</label>
+        <input type="text" id="district" name="district" required><br>
+
+        <label for="block">Block/Municipality:</label>
+        <input type="text" id="block" name="block" required><br>
+
+        <label for="postOffice">Post Office:</label>
+        <input type="text" id="postOffice" name="postOffice" required><br>
+
+        <label for="policeStation">Police Station:</label>
+        <input type="text" id="policeStation" name="policeStation" required><br>
+
+        <label for="pinCode">Pin Code:</label>
+        <input type="number" id="pinCode" name="pinCode" required><br>
+
+        <label for="mobileNumber">Mobile Number:</label>
+        <input type="number" id="mobileNumber" name="mobileNumber" required><br>
+
+        <label for="whatsappNumber">WhatsApp Number:</label>
+        <input type="number" id="whatsappNumber" name="whatsappNumber"><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+            
+            </fieldset>
+        <br>
+<fieldset>
+<legend>D. BANK DETAILS</legend>
+        <h2></h2>
+        <label for="bankAccountNumber">Bank Account Number:</label>
+        <input type="number" id="bankAccountNumber" name="bankAccountNumber" required><br>
+
+        <label for="branch">Branch:</label>
+        <input type="text" id="branch" name="branch" required><br>
+
+        <label for="ifsc">IFSC Code:</label>
+        <input type="text" id="ifsc" name="ifsc" required>
+            </fieldset>
+        <br>
+<fieldset>
+<legend>E. GUARDIAN'S DETAILS</legend>
+        
+        <label for="fatherName">Father's Name:</label>
+        <input type="name" id="fatherName" name="fatherName" required><br>
+
+        <label for="motherName">Mother's Name:</label>
+        <input type="name" id="motherName" name="motherName" required><br>
+
+        <label for="guardianName">Guardian's Name:</label>
+        <input type="name" id="guardianName" name="guardianName"><br>
+
+        <label for="relationship">Relationship (Guardian):</label>
+        <input type="text" id="relationship" name="relationship"><br>
+
+        <label for="annualIncome">Annual Income:</label>
+        <input type="text" id="annualIncome" name="annualIncome"><br>
+
+        <label for="guardianQualification">Guardian's Qualification:</label>
+        <input type="text" id="guardianQualification" name="guardianQualification">
+            </fieldset>
+        <br>
+
+         <input id="riaj" type="submit" value="Submit">
+         <input id="riaj" type="reset" value="reset">
+         
+    </form>
+
+    <div id="submittedData" style="display:none;">
+    <div>=================================================</div>
+        <h2>SAGORBARH B.S. VIDYBHOWAN</h2>
+        <p id="registrationNumber"></p>
+        <p id="studentName"></p>
+        <p id="studentClass"></p>
+        <p id="fatherNameDisplay"></p>
+        <p id="submissionDate"></p>
+        <div style="position: absolute; bottom: 420px; right: 22px;">Signature of Authority</div>
+        <div style="position: absolute; bottom: 420px; left: 25px;">Signature of Guardian</div>
+        <h3>__________________________________________________</h3>
+        <div>=================================================</div>
+        
+    </div>
+
+    <script>
+        
+        
+        
+        
+     
+        document.getElementById('currentDate').value = new Date().toISOString().split('T')[0];
+
+        function toggleCasteNumberField() {
+            const caste = document.getElementById('caste').value;
+            const casteNumberField = document.getElementById('casteNumberField');
+            if (caste === 'sc' || caste === 'st' || caste === 'obc') {
+                casteNumberField.style.display = 'block';
+            } else {
+                casteNumberField.style.display = 'none';
+            }
+        }
+
+        // You may need to adjust the form submission logic according to your backend setup
+        document.getElementById('admissionForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            submitForm();
+        });
+
+        function submitForm() {
+            const form = document.getElementById('admissionForm');
+            const formData = new FormData(form);
+
+            const submittedDataDiv = document.getElementById('submittedData');
+            const randomRegistrationNumber = Math.floor(Math.random() * 1000000);
+
+            document.getElementById('registrationNumber').textContent = `Registration Number: ${randomRegistrationNumber}`;
+            document.getElementById('studentName').textContent = `Name of Student: ${formData.get('name')}`;
+            document.getElementById('studentClass').textContent = `Class: ${formData.get('class')}`;
+            document.getElementById('fatherNameDisplay').textContent = `Father's Name: ${formData.get('fatherName')}`;
+            document.getElementById('submissionDate').textContent = `Current Date: ${formData.get('currentDate')}`;
+
+            form.style.display = 'none';
+            submittedDataDiv.style.display = 'block';
+        }
+    
+ 
+        
+        
+        
+        
+        
+
+        
+        
+    </script>
+</body>
+</html>
